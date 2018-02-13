@@ -66,14 +66,10 @@ class UserRepository extends Repository
 
     public function setProfiles($userId, $profiles)
     {
-        // $getProfile = Profile::where('user_id', $user->id)->get();
-        // dd($getProfile);
         $newProfile = Profile::firstOrNew(['user_id'=>$userId]);
-        // dd($newProfile);
         $newProfile->user_id = $profiles['user_id'] ?? $newProfile->user_id;
         $newProfile->mobile = $profiles['mobile'] ?? $newProfile->mobile;
         $newProfile->description = $profiles['description'] ?? $newProfile->description;
-        // dd($newProfile);
         $newProfile->save();
         return $newProfile;
     }

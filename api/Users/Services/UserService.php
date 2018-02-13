@@ -167,6 +167,9 @@ class UserService
 
     public function addProfiles(int $userId, array $profiles)
     {
+        $user = $this->getRequestedUser($userId, [
+            'includes' => ['profiles']
+        ]);
         return $this->userRepository->setProfiles($userId, $profiles);
 
     }

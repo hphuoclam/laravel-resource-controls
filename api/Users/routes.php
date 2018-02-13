@@ -13,7 +13,7 @@ $router->delete('/users/{id}/roles', 'UserController@removeRoles');
 
 // profile
 $router->post('/users/{id}/profiles', 'UserController@addProfiles');
-// $router->put('/users/{id}/roles', 'UserController@setRoles');
+$router->put('/users/{id}/profiles', 'UserController@addProfiles');
 // $router->delete('/users/{id}/roles', 'UserController@removeRoles');
 
 

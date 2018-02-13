@@ -84,11 +84,4 @@ class UserController extends Controller
 
         return $this->response($this->userService->addProfiles($userId, $profiles));
     }
-
-    // public function setRoles($userId, UserRolesRequest $request)
-    // {
-    //     $roles = $request->get('roles', []);
-
-    //     return $this->response($this->userService->setRoles($userId, $roles));
-    // }
 }
